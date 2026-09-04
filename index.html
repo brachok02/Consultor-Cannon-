@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Consultor de Precios Cannon Home</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="franja-superior">
+            Cannon Home ·
+        </div>
+
+        <div class="contenido">
+
+            <h1>
+                Consultor de Precios
+            </h1>
+
+            <p class="subtitulo">
+                Escanea o ingresa el SKU del producto
+            </p>
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="sku"
+                    placeholder="Ingresa o escanea el SKU"
+                    autocomplete="off"
+                >
+
+                <button
+                    class="boton-buscar"
+                    onclick="buscarProducto()"
+                >
+                    🔍 Buscar
+                </button>
+
+            </div>
+
+            <button
+                class="boton-camara"
+                onclick="abrirEscaner()"
+            >
+                📷 Escanear con cámara
+            </button>
+
+            <p id="mensaje"></p>
+
+            <div id="resultado">
+
+                <div class="fila-resultado">
+
+                    <span class="etiqueta">
+                        Producto
+                    </span>
+
+                    <span id="producto">
+                        -
+                    </span>
+
+                </div>
+
+                <div class="fila-resultado">
+
+                    <span class="etiqueta">
+                        Precio base
+                    </span>
+
+                    <span id="precioBase">
+                        -
+                    </span>
+
+                </div>
+
+                <div class="fila-resultado">
+
+                    <span class="etiqueta">
+                        Descuento
+                    </span>
+
+                    <span id="descuento">
+                        -
+                    </span>
+
+                </div>
+
+                <div class="precio-final">
+
+                    <span class="etiqueta-final">
+                        Precio final
+                    </span>
+
+                    <span id="precioFinal">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        id="modalEscaner"
+        class="modal-escaner"
+    >
+
+        <div class="contenido-escaner">
+
+            <div class="cabecera-escaner">
+
+                <span>
+                    Escanear código
+                </span>
+
+                <button
+                    class="cerrar-escaner"
+                    onclick="cerrarEscaner()"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+            <p class="instruccion-escaner">
+                Apunta la cámara al código de barras del producto.
+            </p>
+
+            <div
+                id="lector"
+                class="lector"
+            ></div>
+
+        </div>
+
+    </div>
+
+    <script src="productos.js"></script>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
