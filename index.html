@@ -13,7 +13,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css"
+        href="style.css?v=20261016"
     >
 </head>
 
@@ -144,6 +144,10 @@
                 Apunta la cámara al código de barras del producto.
             </p>
 
+            <p id="estadoEscaner" role="status" aria-live="polite" style="color:#46677d;font-size:15px">Preparando cámara...</p>
+
+            <div class="controles-camara"><button type="button" id="zoomMas" onclick="cambiarZoom(0.5)" disabled>＋ Zoom</button><button type="button" id="zoomMenos" onclick="cambiarZoom(-0.5)" disabled>－ Zoom</button><button type="button" id="linterna" onclick="alternarLinterna()" disabled>🔦 Linterna</button></div>
+
             <div
                 id="lector"
                 class="lector"
@@ -153,11 +157,11 @@
 
     </div>
 
-    <script src="productos.js"></script>
+    <script src="productos.js?v=20261016"></script>
 
-    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261016"></script>
 
 </body>
 

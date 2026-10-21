@@ -514,3 +514,8 @@ button:hover {
         padding: 18px;
     }
 }
+/* Herramientas del lector: disponibles según compatibilidad del dispositivo */
+.controles-camara{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px;}
+.controles-camara button{padding:10px 12px;background:#e9f1f6;color:#46677d;font-size:14px;border:1px solid #c9dce8;}
+.controles-camara button:disabled{opacity:.45;cursor:not-allowed;}
+#lector video{object-fit:contain;}
